@@ -13,10 +13,10 @@ def test_01():
     digits = datasets.load_digits(return_X_y=True)
     data, target = digits
 
-    if not os.path.exists("homework/estimator.pikle"):
-        raise FileNotFoundError("homework/estimator.pikle not found")
+    if not os.path.exists("homework/estimator.pickle"):
+        raise FileNotFoundError("homework/estimator.pickle not found")
 
-    with open("homework/estimator.pikle", "rb") as file:
+    with open("homework/estimator.pickle", "rb") as file:
         new_clf = pickle.load(file)
 
     accuracy = accuracy_score(
